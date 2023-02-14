@@ -1,0 +1,2 @@
+# fastreader
+ for reading fast
