@@ -1,6 +1,8 @@
 fastreader
 
 features to add:
+. upload a text
+. bookmark, tapping B saves the current word index, stores it somewhere
 . context, toggable, if context is on we can preview prev and next word to the left and right in a smaller font
 . %age displayed as a progress bar along the top of the screen
 . speed notches, labels on the speed bar 
