@@ -5,7 +5,7 @@ function Progress(props){
 const {wordIndex, words} =props
 return (<>
     <div className="tokenTracker">{wordIndex+1} of {words.length+1}</div>
-    <div className="percentageComplete">{(wordIndex+1)/(words.length+1)}</div>
+    <div className="percentageComplete">{Math.trunc(100*((wordIndex+1)/(words.length+1)))}%</div>
     </>);
 }
 

@@ -2,8 +2,25 @@ import React, { useState } from "react";
 import {textFile} from "./App"; // Import the App component from the Typewriter.js file
 import Typewriter from "./Typewriter";
 
-function SpeedSlider() {
-  // Create a state variable named speed that will store the slider value, and initialize it to 50
+  // //does this need to be applied to an input element instead of the document?
+  // document.addEventListener('keydown',
+  //   function (e) {
+
+  //     if (e.key === 'Backspace') {
+  //       console.log(e);
+
+  //       if (wordIndex  < 1) { setWordIndex(0) } else { setWordIndex(wordIndex - 1) }
+  //       ;
+  //     }
+  //   });
+
+
+
+
+function SpeedSlider(props) {
+ 
+  const {onClick, text} = props 
+   // Create a state variable named speed that will store the slider value, and initialize it to 50
   const [speed, setSpeed] = useState(50);
 if (speed <1){ setSpeed(50)}
   // Define a function named handleChange that will update the speed state variable when the slider value changes
