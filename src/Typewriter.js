@@ -5,10 +5,8 @@ import Progress from "./Progress"
 
 
 function Typewriter(props) {
-  const { text, speed } = props;
+  const { text, speed , pause} = props;
   //use state to store the current word index and the displayed text
-
-
 
 
   const [wordIndex, setWordIndex] = useState(0);
@@ -18,7 +16,7 @@ function Typewriter(props) {
 
 
   //split the text into words by spaces
-  const words = text.split(/ |\n/);
+  const words = text.split(/ |\n|-/);
   //use effect to update the displayed text every time the word index changes
   useEffect(() => {
     //get the current word
@@ -32,7 +30,7 @@ function Typewriter(props) {
   useEffect(() => {
     //calculate the interval in milliseconds based on the speed in words per minute
 
-    const interval = 60000 / speed;
+    if (!pause) {    const interval = 60000 / speed;
     //set the interval to change the word index
     const timer = setInterval(() => {
 
@@ -52,8 +50,11 @@ function Typewriter(props) {
 
     }, interval);
     //return a cleanup function to clear the interval when the component unmounts
-    return () => clearInterval(timer);
-  }, [wordIndex, text, speed, words.length]);
+    return () => clearInterval(timer);}
+
+
+
+  }, [wordIndex, text, speed, words.length, pause]);
 
 
 
