@@ -1,12 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
+import Progress from "./Progress"
 //function to listen for delete or backspace key press. if pressed, the word index updates to current index -1
 
 
 
 
 function Typewriter(props) {
-  const { text, speed, ref } = props;
+  const { text, speed } = props;
   //use state to store the current word index and the displayed text
   
   
@@ -46,7 +46,7 @@ function Typewriter(props) {
   }, [wordIndex, text, speed]);
 
   //return the displayed text in a div element
-  return <><div className="bam">{displayedText}</div><div className="stats">{wordIndex+1} of {words.length+1}</div> </>;
+  return <><div className="bam">{displayedText}</div> <Progress wordIndex={wordIndex} words={words}/> </>;
 }
 
 export default Typewriter;
