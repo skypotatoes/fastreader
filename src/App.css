@@ -7,12 +7,19 @@ font-weight: bold;
   justify-content: center;
   height: 100vh;
   background-color: peachpuff;
-  font-size: 24px;
+ 
 }
 
-input[type=range] {
-  -webkit-appearance: none; /* removes the default appearance */
-  width: 300px; /* sets the width of the slider */
-  height: 10px; /* sets the height of the slider */
-  background: red; /* sets the background color of the slider */
+div.bam {
+ 
+  font-size: 112px;
+}
+
+div.stats {
+  
+    font-size: 40px;
+}
+
+div.slider {
+  width:50%;
 }

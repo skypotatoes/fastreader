@@ -1,24 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
-function Typewriter({ text, speed }) {
+//function to listen for delete or backspace key press. if pressed, the word index updates to current index -1
+
+
+
+
+function Typewriter(props) {
+  const { text, speed, ref } = props;
   //use state to store the current word index and the displayed text
+  
+  
   const [wordIndex, setWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
 
-  //use effect to update the displayed text every time the word index changes
-  useEffect(() => {
+
     //split the text into words by spaces
     const words = text.split(/ |\n/);
+  //use effect to update the displayed text every time the word index changes
+  useEffect(() => {
     //get the current word
     const currentWord = words[wordIndex];
     //set the displayed text to the current word
     setDisplayedText(currentWord);
 
-  }, [wordIndex, text]);
+  }, [wordIndex, text,words]);
 
   //use effect to set an interval to change the word index at the given speed
   useEffect(() => {
     //calculate the interval in milliseconds based on the speed in words per minute
+    
     const interval = 60000 / speed;
     //set the interval to change the word index
     const timer = setInterval(() => {
@@ -36,7 +46,7 @@ function Typewriter({ text, speed }) {
   }, [wordIndex, text, speed]);
 
   //return the displayed text in a div element
-  return <div>{displayedText}</div>;
+  return <><div className="bam">{displayedText}</div><div className="stats">{wordIndex+1} of {words.length+1}</div> </>;
 }
 
 export default Typewriter;
