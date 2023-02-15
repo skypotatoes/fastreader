@@ -19,7 +19,7 @@ import Typewriter from "./Typewriter";
 
 function SpeedSlider(props) {
  
-  const {onClick, text} = props 
+ 
    // Create a state variable named speed that will store the slider value, and initialize it to 50
   const [speed, setSpeed] = useState(50);
 if (speed <1){ setSpeed(50)}
