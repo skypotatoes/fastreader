@@ -1,6 +1,6 @@
-const fastreaderBlurb = `FastReader is an experiment in a new way of reading, taking advantage of the unique way in which screens allow us to deliver text, without
-the need to turn pages or even scan a line of text. Instead, FastReader delivers a single word at a time, allowing you to adjust the speed according to your own
-comfort. This allows for rapid intake of a text at rates in excess of 600 words per minute. As the app develops we will add more features according to user feedback
-and continue to explore news ways to read.`
+const fastreaderBlurb = `FastReader in a new way of reading, taking advantage of the unique way in which screens allow us to deliver text, without
+the need to turn pages or even move our eyes to scan a line of text. Instead, we can remain focused on a single spot and FastReader delivers one single word at a time.
+Using the left and right arrow keys will allow you to speed up or slow down the flow of words, and you can pause the stream completely by pressing space. The up and down arrow keys will resize the text. You can move back a word by pressing delete or backspace.
+As the app develops we will add more features according to user feedback and continue to explore news ways to read.`
 
 export default  fastreaderBlurb;

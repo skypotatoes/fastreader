@@ -1,22 +1,20 @@
 fastreader
 
 features to add:
-
-
-. backspace or del moves back one word, sets speed to 50wpm
 . context, toggable, if context is on we can preview prev and next word to the left and right in a smaller font
 . %age displayed as a progress bar along the top of the screen
 . speed notches, labels on the speed bar 
-
+. research the best colours for the screen and text for reading comfort
+. allow upload of text file into the reader
 
 feature added 
 . a pause button, space
-
-
+. resize text with up/down arrow keys ( need to prevent default behaviour of the keys otherwise they will continue to affect the speed bar)
+. backspace or del moves back one word
 
 fix
 
 
-
 fixed
 . clicking anywhere on the screen will set focus to the SpeedSlider
+. css, ce

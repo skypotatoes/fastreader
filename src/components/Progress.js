@@ -3,12 +3,11 @@ import React from "react";
 function Progress(props){
 //display current word out of total words
 const {wordIndex, words,speed,pause} =props
-console.log(pause)
+
 let pauseIndicator=""
 if(pause){
     pauseIndicator="Paused"
 } 
-
 if(!pause){
     pauseIndicator=""  
 }

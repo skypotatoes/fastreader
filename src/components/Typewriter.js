@@ -5,11 +5,12 @@ import Progress from "./Progress"
 
 
 function Typewriter(props) {
-  const { text, speed , pause} = props;
+  const { text, speed , pause, fontSize, wordIndex, setWordIndex, context} = props;
   //use state to store the current word index and the displayed text
 
 
-  const [wordIndex, setWordIndex] = useState(0);
+
+
   const [displayedText, setDisplayedText] = useState("");
 
 
@@ -20,10 +21,18 @@ function Typewriter(props) {
   //use effect to update the displayed text every time the word index changes
   useEffect(() => {
     //get the current word
+    const prevWord = words[wordIndex - 1];
+    const nextWord = words[wordIndex + 1];
     const currentWord = words[wordIndex];
     //set the displayed text to the current word
+    
+    if (context){
+      setDisplayedText(<><div className="prev">{prevWord}</div> <div className="curr">{currentWord}</div> <div className="next"> {nextWord}</div> </>);
+    }else{
+    
+    
     setDisplayedText(currentWord);
-
+    }
   }, [wordIndex, text, words]);
 
   //use effect to set an interval to change the word index at the given speed
@@ -54,12 +63,12 @@ function Typewriter(props) {
 
 
 
-  }, [wordIndex, text, speed, words.length, pause]);
+  }, [wordIndex, text, speed, words.length, pause,setWordIndex]);
 
 
 
   //return the displayed text in a div element
-  return <><div className="bam">{displayedText}</div> <Progress wordIndex={wordIndex} words={words} speed={speed} pause={pause}/> </>;
+  return <><div style={{fontSize:fontSize}}  className="bam">{displayedText}</div> <Progress wordIndex={wordIndex} words={words} speed={speed} pause={pause}/> </>;
 }
 
 export default Typewriter;
