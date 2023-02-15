@@ -59,7 +59,7 @@ function Typewriter(props) {
 
 
   //return the displayed text in a div element
-  return <><div className="bam">{displayedText}</div> <Progress wordIndex={wordIndex} words={words} /> </>;
+  return <><div className="bam">{displayedText}</div> <Progress wordIndex={wordIndex} words={words} speed={speed} pause={pause}/> </>;
 }
 
 export default Typewriter;

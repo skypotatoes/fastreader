@@ -32,7 +32,7 @@ function SpeedSlider(props) {
   return (
     <div>
       <Typewriter text={textFile} speed={speed} pause={pause} />
-      <input id='slider' className="slider" type="range" min="0" max="800" value={speed} step="50" autoFocus="on" onChange={handleChange} onKeyDown={handleKeyPress} />
+      <input id='slider' className="slider" type="range" marks="true" min="0" max="1200" value={speed} step="50"  autoFocus="on" onChange={handleChange} onKeyDown={handleKeyPress} />
     </div>
   );
 }
