@@ -36,7 +36,7 @@ if (speed <1){ setSpeed(50)}
   return (
     <div>
       <Typewriter text={textFile} speed={speed} /> 
-      <input className="slider" type="range" min="0" max="800" value={speed} step="50" autoFocus="on" onChange={handleChange}/>
+      <input id='slider' className="slider" type="range" min="0" max="800" value={speed} step="50" autoFocus="on" onChange={handleChange}/>
     </div>
   );
 }

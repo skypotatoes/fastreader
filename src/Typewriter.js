@@ -15,17 +15,7 @@ function Typewriter(props) {
   const [displayedText, setDisplayedText] = useState("");
 
 
-  // //does this need to be applied to an input element instead of the document?
-  // document.addEventListener('keydown',
-  //   function (e) {
 
-  //     if (e.key === 'Backspace') {
-  //       console.log(e);
-
-  //       if (wordIndex  < 1) { setWordIndex(0) } else { setWordIndex(wordIndex - 1) }
-  //       ;
-  //     }
-  //   });
 
   //split the text into words by spaces
   const words = text.split(/ |\n/);
